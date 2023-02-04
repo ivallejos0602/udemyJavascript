@@ -5,4 +5,5 @@ let sumar = function( a=4,b=5 ){
 }
 
 resultado = sumar(4,10);
+// resultado = sumar(); // como tiene seteados argumentos x defecto, el resultado de sumar retornaria 9
 console.log("suma de ambos argumentos : "+resultado);
