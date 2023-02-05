@@ -20,3 +20,12 @@ console.log(persona);
 // accedemos al método del objeto
 console.log(persona.nombreCompleto());
 
+//Otra manera de crear un objeto (menos convencional)
+
+let humano = new Object();
+humano.nombre = 'Alan';
+humano.direccion = 'Lah Heras 1057';
+humano.telefono = '011-15345679';
+
+console.log(humano.telefono);
+
