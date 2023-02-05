@@ -10,22 +10,17 @@ let persona = {
 }
 
 console.log("nombre :"+persona.nombre);
-console.log("apellido :"+persona.apellido);
-console.log("edad :"+persona.edad);
+//otra manera de acceder a las propiedades de un objeto
+console.log("apellido :"+persona['apellido']);
 
-//Objeto Persona Completo
-console.log("Objeto Persona : ");
-console.log(persona);
+//accedo a las propiedades de un objeto recorriendo con un for sus propiedades
 
-// accedemos al método del objeto
-console.log(persona.nombreCompleto());
+//for in
 
-//Otra manera de crear un objeto (menos convencional)
+console.log("imprimimos por consola todas las props de un obj usando un for");
 
-let humano = new Object();
-humano.nombre = 'Alan';
-humano.direccion = 'Lah Heras 1057';
-humano.telefono = '011-15345679';
-
-console.log(humano.telefono);
+for (nombreProp in persona){
+    console.log(nombreProp+" : ");
+    console.log(persona[nombreProp]);
+}
 
