@@ -17,4 +17,9 @@ let persona = {
     }
 }
 
-console.log( persona.nombreCompleto );
+//uso del método set
+persona.lang = 'en';
+
+//uso del metodo get
+console.log(persona.lang);
+console.log(persona.idioma);
