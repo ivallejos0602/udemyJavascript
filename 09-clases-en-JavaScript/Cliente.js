@@ -23,3 +23,6 @@ class Cliente extends Persona {
         return super.toString()+' '+this._idCliente+' '+this.fechaRegistro();
     }
 }
+
+
+
