@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejemplo DOM con Javascript</title>
+</head>
+<body>
+
+
+    <h1 id="cabezera"> Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos.</p>
+
+    <script>
+        // con la prop innerHTML accedemos al texto del elemento
+        let cabezera = document.getElementById('cabezera');
+        console.log('valor cabezera : '+cabezera.innerHTML);
+        let parrafo=document.getElementById('parrafo');
+        console.log('valor parrafo :'+parrafo.innerHTML);   
+        console.log('Saludos desde JS');
+    </script>
+   
+    
+</body>
+</html>
