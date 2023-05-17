@@ -2,20 +2,65 @@
 <html lang="en">
 <head>
     <title>Ejemplo DOM con Javascript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 
-
     <h1 id="cabezera"> Ejemplo DOM con JavaScript</h1>
-    <p id="parrafo">Saludos.</p>
-
+    <h2 class='azul'> Este header h2 será capturado por azul</h2>
+    <p id='parrafo'>Saludos 1</p>
+    <p>Saludos 1</p>
+    <p class='azul'>Saludos 2</p>
+    <p>Saludos 3</p>
+    <p class='azul'>Saludos 4</p>
+    <p>Saludos 5</p>
+    <p class='azul'>Buenas tardes en Azul </p>
+    <p class='azul'>¿ como andan alla x Azul ? </p>
     <script>
+
+        let parrafos = document.getElementsByTagName('p');
+        let elementos = document.getElementsByClassName('azul');
+
+        // de esta forma se elige los elementos HTML y los estilos.
+        let elementosSelecc = document.querySelectorAll('p.azul');
+        console.log('usamos el método document.querySelectorAll : ');
+        for (elemento of elementosSelecc){
+            console.log(`${elemento.innerHTML}`);
+        }
+
+        console.log(`Cantidad de párrafos: ${parrafos.length}`);
+        for ( let i=0; i < parrafos.length ; i++){
+            console.log( `${i} -  ${parrafos[i].innerHTML}` );
+        }    
+
+        console.log(`Cantidad de elementos con el estilo azul: ${elementos.length}`);
+        for ( let i=0; i < elementos.length ; i++){
+            console.log( `${i} -  ${elementos[i].innerHTML}` );
+        } 
+
+        //otra sintaxis para recorrer los elementos HTML que tenemos en el Vector
+        console.log('Mostrando de nuevo los elementos HTML con otra sintaxis...');
+        for ( elemento of elementos ){
+            console.log(`${elemento.innerHTML}`);
+        }
+
         // con la prop innerHTML accedemos al texto del elemento
         let cabezera = document.getElementById('cabezera');
         console.log('valor cabezera : '+cabezera.innerHTML);
+        // uso de backticks y template literals
+        console.log(`valor cabezera con template literals: ${cabezera.innerHTML}` );
         let parrafo=document.getElementById('parrafo');
-        console.log('valor parrafo :'+parrafo.innerHTML);   
+        console.log('valor parrafo :'+parrafo.innerHTML); 
+        console.log(`valor parrafo con template literals : ${parrafo.innerHTML}`);   
         console.log('Saludos desde JS');
+
+        parrafo.innerHTML = 'Nuevo Valor del Párrafo';
+        cabezera.innerHTML = 'Nuevo valor de la Cabezera';
+
     </script>
    
     
